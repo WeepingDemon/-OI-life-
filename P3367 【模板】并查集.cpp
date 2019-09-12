@@ -10,9 +10,7 @@ int getfa(int step){
 
 int main(){
 	cin >> N >> M;
-	for(int i = 1;i <= N;i++){
-		a[i] = i;
-	}
+	for(int i = 1;i <= N;i++) a[i] = i;
 	for(int i = 1;i <= M;i++){
 		cin >> op >> x >> y;
 		if(op == 1) a[getfa(x)] = a[getfa(y)];
