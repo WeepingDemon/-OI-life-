@@ -1,0 +1,35 @@
+#include<iostream>
+#include<cstring>
+#include<cstdio>
+#include<algorithm>
+#include<cmath>
+#include<queue>
+using std::cin;using std::cout;using std::endl;
+typedef long long ll;
+typedef unsigned long long ull;
+int n,fa[200005],dis[200005],ans = 1e9;
+
+int father(int x){
+    if(fa[x] == x) return x;
+    int tmp = fa[x];
+    fa[x] = father(fa[x]);
+    dis[x] += dis[tmp];
+    return fa[x];
+}
+
+void link(int x,int y,int a,int b){fa[x] = y; dis[a] = dis[b] + 1;}
+
+int main(){
+    freopen("in.in", "r", stdin);
+    cin >> n;
+    for(int i = 1;i <= n;i++) fa[i] = i;//源头为自己
+    for(int i = 1;i <= n;i++){
+        int x;
+        cin >> x;
+        int fa_a = father(i) , fa_b = father(x);
+        if(fa_a != fa_b) link(fa_a,fa_b,i,x);
+        else ans = std::min(ans,dis[i]+dis[x]+1);
+    }
+    cout << ans;
+    return 0;
+}
