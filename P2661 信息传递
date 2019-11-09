@@ -8,7 +8,7 @@ using std::cin;using std::cout;using std::endl;
 typedef long long ll;
 typedef unsigned long long ull;
 int n,fa[200005],dis[200005],ans = 1e9;
-
+//并查集的父为被传输者
 int father(int x){
     if(fa[x] == x) return x;
     int tmp = fa[x];
@@ -22,7 +22,7 @@ void link(int x,int y,int a,int b){fa[x] = y; dis[a] = dis[b] + 1;}
 int main(){
     freopen("in.in", "r", stdin);
     cin >> n;
-    for(int i = 1;i <= n;i++) fa[i] = i;//源头为自己
+    for(int i = 1;i <= n;i++) fa[i] = i;
     for(int i = 1;i <= n;i++){
         int x;
         cin >> x;
