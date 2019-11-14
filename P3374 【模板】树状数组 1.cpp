@@ -1,42 +1,45 @@
 #include<iostream>
-using std::cin;using std::cout;using std::endl;using std::cerr;
-int tree[2000010],N,M;
-int lowbit(int x){
-	return x & -x;
-}
+#include<cstring>
+#include<cstdio>
+#include<algorithm>
+typedef long long ll;
+using std::cin;using std::cout;using std::endl;
 
-void add(int index,int k){
-	while(index<=N){
-		tree[index]+=k;
-		index+=lowbit(index);
-	}
-	return;
-}
+ll n,m,tree[2000010];
 
-int sum(int index){
-	int ans=0;
-	while(index!=0){
-		ans+=tree[index];
-		index-=lowbit(index); 
-	}
-	return ans;
-}
+ll lowerbit(ll x){return x&(-x);}
+
+ll ask(ll p){
+    ll ans = 0;
+    while(p > 0){
+        ans += tree[p];
+        p -= lowerbit(p);
+    }
+    return ans;
+}//区间和查询1~p
+
+void add(ll p,ll x){
+    while(p <= n){
+        tree[p] += x;
+        p += lowerbit(p);
+    }
+}//单点加法
 
 int main(){
-	cin>>N>>M;
-	for(int i=1;i<=N;i++){
-		//cerr<<"Now beginning add"<<endl;
-		int l;
-		cin>>l;
-		add(i,l);
-	}
-	//cerr<<"add end"<<endl;
-	int method,a,b;
-	for(int i=1;i<=M;i++){
-		//cerr<<"come on"<<endl;
-		cin>>method>>a>>b;
-		if(method==1) add(a,b);
-		if(method==2) cout<<sum(b)-sum(a-1)<<endl;
-	}
-	return 0;
-}  
+    #ifdef LOCAL
+    freopen("in.in", "r", stdin);
+    #endif
+    cin >> n >> m;
+    for(int p = 1;p <= n;p++){
+        ll x;
+        cin >> x;
+        add(p,x);
+    }
+    ll opt,a,b;
+    for(int i = 1;i <= m;i++){
+        cin >> opt >> a >> b;
+        if(opt == 1) add(a,b);
+        else cout << ask(b) - ask(a-1) << "\n";
+    }
+    return 0;
+}
