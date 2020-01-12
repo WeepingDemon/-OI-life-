@@ -26,7 +26,6 @@ void yh(){
 
 int main(){
     // freopen("in.in", "r", stdin);
-
     int t;
     cin >> t >> mod;
     yh();
