@@ -6,6 +6,7 @@ using std::cin;using std::cout;using std::endl;
 typedef long long ll;
 typedef unsigned long long ull;
 int l,n,max,min; 
+
 int main(){
 	cin >> l >> n;
 	for(int i = 1;i <= n;i++){
