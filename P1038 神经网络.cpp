@@ -51,7 +51,6 @@ int main(){
 			flag = true;
 		}
 	}
-	
 	if(!flag) cout << "NULL";
 	return 0;
 }
