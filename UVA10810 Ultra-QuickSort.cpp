@@ -36,5 +36,6 @@ void solve(ll n){
 int main(){
     ll n;
     while(cin>>n && n) solve(n);
+    
     return 0;
 }
