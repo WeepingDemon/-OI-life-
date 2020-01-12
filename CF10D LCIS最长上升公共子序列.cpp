@@ -36,9 +36,7 @@ int main(){
 				dp[i][j] = dp[i-1][j];
 				turn[i][j] = j;//序列无转移即无前驱 
 			}
-//			cout << dp[i][j] << " ";
 		}
-//		cout << endl;
 	}
 	cout << dp[n][m] << endl;
 	Aj = 1;
