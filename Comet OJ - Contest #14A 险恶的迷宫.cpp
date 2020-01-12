@@ -5,7 +5,6 @@
 using std::cin;using std::cout;using std::endl;
 typedef long long ll;
 typedef unsigned long long ull;
-
 int main(){
 	ll n,a,b,r,x,y,sum,ans = 0;
 	cin >> n >> a >> b >> r;
