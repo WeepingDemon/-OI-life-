@@ -20,7 +20,6 @@ int main(){
         cin >> a[i] >> b[i] >> c[i];
         step[i] = 1;
     }
-
     for(register int i = 1;i <= m;++i){
         lim = inf;
         for(register int j = 1;j <= n;++j){
