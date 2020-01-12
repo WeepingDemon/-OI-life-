@@ -57,7 +57,4 @@ int main(){
 		ll = i , rr = i+k-1;
 		cout << querymax(root) << "\n";
 	}
-	
-	
-	
 }
