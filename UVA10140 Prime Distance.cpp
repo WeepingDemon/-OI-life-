@@ -38,5 +38,6 @@ int main(){
     if(!ma) cout << "There are no adjacent primes.\n";
     else cout << y1 << ',' << y2 << " are closest, " << x1 << ',' << x2 << " are most distant.\n";
     }
+    
     return 0;
 }
