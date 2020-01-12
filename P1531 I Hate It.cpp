@@ -76,5 +76,6 @@ int main(){
             if(now > a[nown]) a[nown] = now;
         }
     }
+    
     return 0;
 }
