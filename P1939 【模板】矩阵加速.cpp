@@ -1,5 +1,4 @@
 /*题解：https://www.luogu.org/blog/Mifer/post-2019393-post (T2)*/
-
 #include <iostream>
 using std::cin;using std::cout;using std::endl;
 const int mod = 1e9+7;
