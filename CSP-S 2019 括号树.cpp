@@ -30,7 +30,7 @@ inline void dfs(register int now){
     }
 
     for(register int i = head[now];i;i = next[i]) dfs(ver[i]);//往后搜
-	
+
     //复原局面
     if(str[now] == '(') --top;
     else if(flg) tmp[++top] = TMP;
