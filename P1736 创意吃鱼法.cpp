@@ -29,9 +29,7 @@ int main(){
 			}
 		}
 	}
-	
-	
-	
+
 	for(register int i = 1;i <= n;++i)
 	 for(register int j = 1;j <= m;++j)
 	  dp[i][j] = kl[i][j] = ku[i][j] = 0;
