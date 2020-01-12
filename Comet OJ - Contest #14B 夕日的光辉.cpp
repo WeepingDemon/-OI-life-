@@ -4,7 +4,6 @@
 using std::cin;using std::cout;using std::endl;
 typedef long long ll;
 typedef unsigned long long ull;
-
 char s[int(1e6+10)];
 int n,p,k;
 
