@@ -1,5 +1,4 @@
 //核心思想是归并排序，通过分治保证num[p]~num[mid]内的元素按照升序排序，并与num[mid+1]~num[q]内的元素进行归并
-
 #include<iostream>
 #include<cstdio>
 using namespace std;
