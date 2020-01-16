@@ -20,11 +20,10 @@ int main(){
 		cin >> b[i];
 		b[i] = map[b[i]];
 	}
-	
 	d[1] = b[1];
 	for(int i = 2;i <= n;i++){
 		if(b[i] > d[len]) d[++len] = b[i];
-		else{
+		else {
 			int pos = lower_bound(d+1,d+len+1,b[i]) - d;
 			d[pos] = b[i];
 		}
