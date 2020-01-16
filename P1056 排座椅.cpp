@@ -4,7 +4,6 @@
 using namespace std;
 int M,N,K,L,D,cnty,cntx,MAXx,MAXy,x[100010],y[100010];
 
-
 struct node{
 	int times;
 	int num;
