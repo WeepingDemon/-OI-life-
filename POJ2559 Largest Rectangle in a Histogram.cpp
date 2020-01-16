@@ -6,9 +6,6 @@ typedef long long ll;
 ll n,stack[100010],wi[100010],top;
 ll ans;
 int main(){
-    #ifdef LOCAL
-    freopen("in.in", "r", stdin);
-    #endif
     while(1){
         scanf("%lld",&n);ll x;
         if(n == 0) break;
