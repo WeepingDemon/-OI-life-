@@ -3,7 +3,6 @@
 #include<cstdio>
 #include<algorithm>
 #include<cmath>
-//int[1e7] ll[5*1e6]
 
 using std::cin;using std::cout;using std::endl;
 typedef long long ll;
@@ -32,16 +31,8 @@ ll query(int l,int r){
 }
 
 int main(){
-    #ifdef LOCAL
-    freopen("in.in", "r", stdin);
-    #endif
     n = read() , m = read();
     build();
-    // for(int i = 0;i < 5;i++){
-    //     for(int j = 1;j <= 5;j++){
-    //         cout << st[j][i] << " ";
-    //     }cout << endl;
-    // }
     int l,r;
     for(int i = 1;i <= m;i++){
         l = read() , r = read();
