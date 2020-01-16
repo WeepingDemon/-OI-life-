@@ -30,7 +30,6 @@ void work(long long x,long long *cnt){
     //减去每一个零导数字，为当前位数最高位为0的数字的个数，因此减去ten[i-1]
         cnt[0] -= ten[i-1];
     }
-   
 }
 
 int main(){
