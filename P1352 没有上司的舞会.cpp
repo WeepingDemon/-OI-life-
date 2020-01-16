@@ -14,7 +14,6 @@ struct node{
 }a[6010];
 ll dp[6010][2];//dp[x][1]参加//dp[x][0]不参加 
 
-
 //dp[i][1] = max{dp[sonofi][0]
 void DP(int root){//flag表示其上司是否去
 	ll tmp = 0;
