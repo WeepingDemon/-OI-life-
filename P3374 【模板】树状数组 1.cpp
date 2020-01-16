@@ -26,9 +26,7 @@ void add(ll p,ll x){
 }//单点加法
 
 int main(){
-    #ifdef LOCAL
-    freopen("in.in", "r", stdin);
-    #endif
+    std::ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cin >> n >> m;
     for(int p = 1;p <= n;p++){
         ll x;
