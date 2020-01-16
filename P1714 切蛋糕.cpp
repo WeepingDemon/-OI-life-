@@ -15,7 +15,7 @@ int main(){
 		a[i] = a[i-1] + x;
 	}
 	l = 1 , r = 1 , ans = 0;
-	for(register int i = 1;i <= n;i++){
+	for(register int i = 1;i <= n;++i){
 		ans = ans > a[i] - a[p[l]] ? ans : a[i] - a[p[l]];
 		while(p[l] < i - m + 1) ++l;
 		while(a[p[r]] >= a[i] && r >= l) --r;
