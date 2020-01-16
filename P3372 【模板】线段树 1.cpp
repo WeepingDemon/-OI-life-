@@ -11,15 +11,15 @@ ll n,m,a[100010],L,R,cnt;
 
 struct node{
     ll l,r,sum,tag;
-    node *ls,*rs;
+    node * ls,* rs;
     ll dis(){return r - l + 1;};
 }tree[400010];
 
-node *create(){return &tree[cnt++];}
+node * create(){return &tree[cnt++];}
 
-void pushup(node *cur){cur->sum = cur->ls->sum + cur->rs->sum;}
+void pushup(node * cur){cur->sum = cur->ls->sum + cur->rs->sum;}
 
-void pushdown(node *cur){
+void pushdown(node * cur){
     cur->ls->tag += cur->tag;
     cur->rs->tag += cur->tag;
     cur->ls->sum += cur->tag * cur->ls->dis();
@@ -54,12 +54,8 @@ void update(node *cur,ll x){
 
 int main(){
     ll x;int opt;
-    #ifdef LOCAL
-    freopen("in.in", "r", stdin);
-    #endif
     scanf("%lld%lld",&n,&m);
     for(ll i = 1;i <= n;i++) scanf("%d",a+i);
-
     node *root = create();
     build(root,1,n);
 
