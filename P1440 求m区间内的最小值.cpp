@@ -5,8 +5,7 @@ using namespace std;
 int q[2000001][2] , n , m , head = 0 , tail = 0 , x;
 
 int main() {
-
-	std::ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);	
+    std::ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);	
     cin >> n >> m;
     cout << "0\n";
     cin >> q[tail++][0];
