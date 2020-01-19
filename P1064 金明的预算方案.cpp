@@ -44,7 +44,6 @@ int main(){
 				if(V <= j){
 					bag[j] = max(bag[j],bag[j-V]+Welth);
 				}
-//				cout << bag[j] << endl;
 			}	
 			if(item[i].cnt == 2){
 				//配件有两个时
@@ -53,23 +52,17 @@ int main(){
 				if(V <= j){
 					bag[j] = max(bag[j],bag[j-V]+Welth);
 				}
-//				cout << bag[j] << endl;
-				
 				V = item[i].w+item[item[i].sons[2]].w;
 				Welth = item[i].importance+item[item[i].sons[2]].importance;
 				if(V <= j){
 					bag[j] = max(bag[j],bag[j-V]+Welth);
 				}
-//				cout << bag[j] << endl;
-				
 				V += item[item[i].sons[1]].w;
 				Welth += item[item[i].sons[1]].importance;
 				if(V <= j){
 					bag[j] = max(bag[j],bag[j-V]+Welth);
 				}
-//			cout << j << " " << bag[j] << endl;
 			}
-//			cout << endl << endl << endl;
 		}
 	}
 	ll ans = 0;
