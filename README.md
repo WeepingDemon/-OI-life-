@@ -7,4 +7,4 @@
 https://www.luogu.org/blog/Mifer/
 
 *蒟蒻的新博客：*
-weepingdemon.github.io
+https://weepingdemon.gitee.io/blog/
