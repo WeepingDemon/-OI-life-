@@ -15,7 +15,7 @@ struct node{
 
 inline node * create(){	return &tree[++cnt]; }
 
-inline void pushup(node * cur){	cur->sum = cur->ls->sum + cur->rs->sum; }
+inline void pushup(node * cur){	cur->sum = cur->ls->sum + cur->rs->sum; return;}
 
 inline void pushdown(node * cur){
 //-----------------------------------------------------
@@ -32,6 +32,7 @@ inline void pushdown(node * cur){
 	cur->rs->sum += cur->tag1 * cur->rs->dis() , cur->rs->sum %= p;
 //-----------------------------------------------------
 	cur->tag1 = 0 , cur->tag2 = 1;
+	return;
 }
 
 inline void build(node * cur , int l , int r){
@@ -45,6 +46,7 @@ inline void build(node * cur , int l , int r){
 	cur->ls = create() , cur->rs = create();
 	build(cur->ls,l,mid) , build(cur->rs,mid+1,r);
 	pushup(cur);
+	return;
 }
 
 inline ll query(node * cur){
@@ -64,6 +66,7 @@ inline void add(node * cur){
 	pushdown(cur);
 	add(cur->ls) , add(cur->rs);
 	pushup(cur);
+	return;
 }
 
 inline void mat(node * cur){
@@ -77,6 +80,7 @@ inline void mat(node * cur){
 	pushdown(cur);
 	mat(cur->ls) , mat(cur->rs);
 	pushup(cur);
+	return;
 }
 
 int main(){
@@ -99,4 +103,5 @@ int main(){
 			add(root);
 		}
 	}
+	return 0;
 }
