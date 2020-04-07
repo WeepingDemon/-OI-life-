@@ -16,9 +16,6 @@ using std::string;using std::cin;using std::cout;
 ll n,m,a[1111111],p[1111111],cnt,now = 1,ans[1111111];
 ll tree[4444444];
 
-
-//线段树实现单点修改区间查询
-
 struct NODE{
     ll l,r,pos;
 }b[1111111];
